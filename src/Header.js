@@ -10,7 +10,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 function Header() {
   return (
     <div className="header">
-      <div class="header--left">
+      <div className="header--left">
         <IconButton>
           <MenuIcon />
         </IconButton>
@@ -19,14 +19,14 @@ function Header() {
           alt=""
         />
       </div>
-      <div class="header--middle">
+      <div className="header--middle">
         <IconButton>
           <SearchIcon />
         </IconButton>
         <input type="text" placeholder="Search mail" />
         <ArrowDropDownIcon />
       </div>
-      <div class="header--right">
+      <div className="header--right">
         <IconButton>
           <AppsIcon />
         </IconButton>

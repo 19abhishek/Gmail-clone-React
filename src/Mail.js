@@ -21,8 +21,8 @@ function Mail() {
   const history = useHistory();
   return (
     <div className="mail">
-      <div class="mail--tools">
-        <div class="mail--toolsLeft">
+      <div className="mail--tools">
+        <div className="mail--toolsLeft">
           <IconButton onClick={() => history.push("/")}>
             <ArrowBackIcon />
           </IconButton>
@@ -51,7 +51,7 @@ function Mail() {
             <MoreVertIcon />
           </IconButton>
         </div>
-        <div class="mail--toolsRight">
+        <div className="mail--toolsRight">
           <IconButton>
             <UnfoldMoreIcon />
           </IconButton>
@@ -63,14 +63,14 @@ function Mail() {
           </IconButton>
         </div>
       </div>
-      <div class="mail--body">
-        <div class="mail--bodyHeader">
+      <div className="mail--body">
+        <div className="mail--bodyHeader">
           <h2>Subject</h2>
           <LabelImportantIcon className="mail--important" />
           <p>Title</p>
           <p className="mail--time">10pm</p>
         </div>
-        <div class="mail--message">
+        <div className="mail--message">
           <p>This is a message</p>
         </div>
       </div>

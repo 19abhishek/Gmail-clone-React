@@ -19,8 +19,8 @@ import EmailRow from "./EmailRow";
 function EmailList() {
   return (
     <div className="emailList">
-      <div class="emailList--settings">
-        <div class="emailList--settingsLeft">
+      <div className="emailList--settings">
+        <div className="emailList--settingsLeft">
           <Checkbox />
           <IconButton>
             <ArrowDropDown />
@@ -32,7 +32,7 @@ function EmailList() {
             <MoreVertIcon />
           </IconButton>
         </div>
-        <div class="emailList--settingsRight">
+        <div className="emailList--settingsRight">
           <IconButton>
             <ChevronLeftIcon />
           </IconButton>
@@ -47,12 +47,12 @@ function EmailList() {
           </IconButton>
         </div>
       </div>
-      <div class="emailList--section">
+      <div className="emailList--section">
         <Section Icon={InboxIcon} title="primary" color="red" selected={true} />
         <Section Icon={PeopleIcon} title="Social" color="#1A73E8" />
         <Section Icon={LocalOfferIcon} title="Promotions" color="green" />
       </div>
-      <div class="emailList--list">
+      <div className="emailList--list">
         <EmailRow
           title="Twitch"
           subject="Hey fellow streamers"
