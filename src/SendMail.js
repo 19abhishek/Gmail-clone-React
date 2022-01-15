@@ -5,40 +5,56 @@ import { Button } from "@material-ui/core";
 import { useForm } from "react-hook-form";
 
 function SendMail() {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = (formData) => {
+    console.log(formData);
   };
 
   return (
     <div className="sendMail">
-      <div class="sendMail--header">
+      <div className="sendMail--header">
         <h3>New Message</h3>
         <CloseIcon className="sendMail--close" />
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          name="to"
           placeholder="To"
           type="text"
-          ref={register({ required: true })}
+          {...register("to", { required: true })}
         />
+        {errors.to && <p className="sendMail--error">To is required"</p>}
         <input
-          name="subject"
           placeholder="Subject"
           type="text"
-          ref={register({ required: true })}
+          {...register("subject", { required: true })}
         />
+        {errors.subject && (
+          <p className="sendMail--error">Subject is required</p>
+        )}
         <input
-          name="message"
           placeholder="Message"
           type="text"
           className="sendMail--message"
-          ref={register({ required: true })}
+          {...register("message", { required: true })}
         />
+        {errors.message && (
+          <p className="sendMail--error">Message is required</p>
+        )}
         <div className="sendMail--option">
-          <Button className="sendMail--send">Send</Button>
+          <Button
+            className="sendMail--send"
+            type="submit"
+            variant="contained"
+            color="primary"
+          >
+            Send
+          </Button>
         </div>
       </form>
     </div>
