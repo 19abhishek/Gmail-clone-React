@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import mailSlice from "./mailSlice";
 
 export const userSlice = createSlice({
   name: "user",
